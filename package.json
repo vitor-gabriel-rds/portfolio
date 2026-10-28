@@ -1,0 +1,19 @@
+{
+  "name": "victor-arvellos-a24-portfolio",
+  "version": "1.0.0",
+  "description": "Portfólio de Engenharia de Software com estética editorial A24 inspirado em a24.raviklaassens.com",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve -l 3000 .",
+    "dev": "npx serve -l 3000 ."
+  },
+  "keywords": [
+    "portfolio",
+    "a24",
+    "software-engineer",
+    "full-stack",
+    "editorial-design"
+  ],
+  "author": "Victor Gabriel Arvellos",
+  "license": "MIT"
+}

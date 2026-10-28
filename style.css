@@ -1,0 +1,527 @@
+/* ==========================================================================
+   VICTOR GABRIEL ARVELLOS — A24 EDITORIAL SOFTWARE ARCHIVE
+   Inspirado no layout minimalista e cinemático de a24.raviklaassens.com
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-surface: #111111;
+  --bg-card: #141414;
+  --bg-elevated: #1a1a1a;
+  --border-subtle: #222222;
+  --border-medium: #333333;
+  --border-light: rgba(255, 255, 255, 0.15);
+  --text-primary: #f5f5f5;
+  --text-secondary: #8e8e8e;
+  --text-muted: #555555;
+  --accent-gold: #c5a059;
+  --accent-silver: #d1d5db;
+  --accent-red: #e11d48;
+}
+
+/* Base Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-primary);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  color: var(--text-primary);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #444444;
+}
+
+/* Typography styles */
+.font-editorial-title {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.font-editorial-serif {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.font-tech-mono {
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.05em;
+}
+
+.font-editorial-sans {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 0.03em;
+}
+
+/* Hairline Grid & Borders */
+.border-hairline {
+  border-color: var(--border-subtle);
+}
+
+.border-b-hairline {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.border-t-hairline {
+  border-top: 1px solid var(--border-subtle);
+}
+
+.border-l-hairline {
+  border-left: 1px solid var(--border-subtle);
+}
+
+.border-r-hairline {
+  border-right: 1px solid var(--border-subtle);
+}
+
+/* Film Grain Texture */
+#grain-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.038;
+  mix-blend-mode: screen;
+}
+
+/* Subtle Vignette */
+.vignette-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9998;
+  background: radial-gradient(circle at 50% 50%, transparent 60%, rgba(0, 0, 0, 0.65) 100%);
+}
+
+/* ==========================================================================
+   PHYSICAL MEDIA STAGE (DISC & JEWEL SLEEVE) - RAVI KLAASSENS INSPIRATION
+   ========================================================================== */
+
+.media-stage-container {
+  perspective: 1200px;
+}
+
+.media-case {
+  position: relative;
+  width: 320px;
+  height: 440px;
+  background: #121212;
+  border: 1px solid #282828;
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .media-case {
+    width: 360px;
+    height: 480px;
+  }
+}
+
+.media-case:hover {
+  transform: translateY(-8px) rotateY(-4deg);
+  box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.95), 0 0 15px rgba(255, 255, 255, 0.08);
+}
+
+/* The Optical Disc (sliding from behind/inside the sleeve) */
+.optical-disc {
+  position: absolute;
+  top: 15%;
+  right: -80px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    #050505 0%,
+    #0d0d0d 15%,
+    #2a2a2a 20%,
+    #141414 28%,
+    #3b3b3b 40%,
+    #181818 45%,
+    #4a4a4a 60%,
+    #1c1c1c 70%,
+    #0a0a0a 100%
+  );
+  box-shadow: 
+    0 15px 35px rgba(0,0,0,0.8),
+    inset 0 0 30px rgba(255,255,255,0.15),
+    inset 0 0 4px rgba(255,255,255,0.4);
+  z-index: 1;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), right 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .optical-disc {
+    width: 380px;
+    height: 380px;
+    top: 10%;
+    right: -120px;
+  }
+}
+
+/* Disc holographic rainbow sheen */
+.optical-disc::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 45deg,
+    transparent 0deg,
+    rgba(255, 0, 128, 0.15) 45deg,
+    rgba(0, 255, 255, 0.2) 90deg,
+    rgba(255, 235, 59, 0.15) 135deg,
+    transparent 180deg,
+    rgba(255, 0, 128, 0.15) 225deg,
+    rgba(0, 255, 255, 0.2) 270deg,
+    rgba(255, 235, 59, 0.15) 315deg,
+    transparent 360deg
+  );
+  opacity: 0.65;
+  mix-blend-mode: color-dodge;
+  animation: discSheen 12s linear infinite;
+}
+
+/* Disc center spindle hole */
+.optical-disc::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #0a0a0a;
+  border: 12px solid #1a1a1a;
+  box-shadow: 
+    0 0 0 2px #333,
+    inset 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.disc-spindle-clear {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+}
+
+/* Disc text etch */
+.disc-text-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.35em;
+  color: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+@keyframes discSheen {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes discSpinSlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.media-stage-wrapper:hover .optical-disc {
+  right: -150px;
+  transform: rotate(45deg);
+}
+
+@media (min-width: 1024px) {
+  .media-stage-wrapper:hover .optical-disc {
+    right: -200px;
+    transform: rotate(60deg);
+  }
+}
+
+/* ==========================================================================
+   POSTER CARDS & EDITORIAL STYLING
+   ========================================================================== */
+
+.editorial-poster-card {
+  position: relative;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.editorial-poster-card:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8);
+}
+
+/* Image zoom inside poster */
+.poster-visual-wrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background-color: #0d0d0d;
+}
+
+.poster-visual-wrapper img, 
+.poster-visual-wrapper .generative-art {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+}
+
+.editorial-poster-card:hover .poster-visual-wrapper img,
+.editorial-poster-card:hover .poster-visual-wrapper .generative-art {
+  transform: scale(1.05);
+  filter: contrast(1.08) brightness(1.05);
+}
+
+/* Laurel wreath styling */
+.laurel-wreath {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-primary);
+}
+
+/* Buttons with A24 Aesthetic (Hairline, all-caps, letter-spaced) */
+.btn-a24-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background-color: #f5f5f5;
+  color: #0a0a0a;
+  border: 1px solid #f5f5f5;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-a24-primary:hover {
+  background-color: #0a0a0a;
+  color: #f5f5f5;
+  border-color: #f5f5f5;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+}
+
+.btn-a24-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: #d1d5db;
+  border: 1px solid var(--border-medium);
+  transition: all 0.25s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-a24-outline:hover {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-a24-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-a24-ghost:hover {
+  color: #ffffff;
+  border-color: var(--border-medium);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Modals */
+.a24-modal-backdrop {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(5, 5, 5, 0.85);
+}
+
+.a24-modal-panel {
+  background-color: #0e0e0e;
+  border: 1px solid #292929;
+  box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(255, 255, 255, 0.07);
+}
+
+/* Toast Notifications */
+#toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.toast-msg {
+  pointer-events: auto;
+  background-color: #141414;
+  border: 1px solid #333;
+  border-left: 3px solid #f5f5f5;
+  padding: 14px 20px;
+  color: #f5f5f5;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+  animation: toastIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+@keyframes toastIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form Input Styling */
+.a24-input {
+  width: 100%;
+  background-color: #141414;
+  border: 1px solid #282828;
+  color: #f5f5f5;
+  padding: 10px 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  outline: none;
+}
+
+.a24-input:focus {
+  border-color: #777777;
+  background-color: #181818;
+}
+
+.a24-label {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #8e8e8e;
+  margin-bottom: 6px;
+}
+
+/* Ticker text animation */
+@keyframes tickerSlide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-track {
+  display: flex;
+  width: 200%;
+  animation: tickerSlide 28s linear infinite;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+/* Sound indicator waves */
+.sound-bar {
+  width: 2px;
+  background-color: #ffffff;
+  animation: soundPulse 1.2s ease-in-out infinite alternate;
+}
+.sound-bar:nth-child(1) { height: 6px; animation-delay: 0.1s; }
+.sound-bar:nth-child(2) { height: 14px; animation-delay: 0.3s; }
+.sound-bar:nth-child(3) { height: 9px; animation-delay: 0.2s; }
+.sound-bar:nth-child(4) { height: 12px; animation-delay: 0.4s; }
+
+@keyframes soundPulse {
+  0% { height: 4px; }
+  100% { height: 14px; }
+}

@@ -172,7 +172,7 @@
           </div>
           <div class="flex justify-between py-1 border-b border-neutral-900">
             <span class="text-neutral-500 uppercase">STACK PRINCIPAL:</span>
-            <span class="text-neutral-200">TypeScript • React • Node • Python • Go</span>
+            <span class="text-neutral-200">React • TypeScript • Node.js • Vite • MongoDB</span>
           </div>
           <div class="flex justify-between py-1">
             <span class="text-neutral-500 uppercase">SISTEMA DE PERSISTÊNCIA:</span>
@@ -204,7 +204,7 @@
         <!-- Controles de Navegação do Palco (Anterior, Próximo e Contador) -->
         <div class="flex items-center gap-4">
           <div id="stage-counter" class="text-sm font-tech-mono text-neutral-400 px-3 py-1 bg-neutral-950 border border-neutral-800">
-            01 / 03
+            01 / 04
           </div>
           <div class="flex items-center gap-1">
             <button id="stage-prev-btn" class="btn-a24-outline px-3 py-2 text-sm" title="Projeto Anterior (Seta Esquerda)">
@@ -265,7 +265,7 @@
             SOFTWARE RELEASES & CODE SPECS
           </h3>
           <p id="projects-count-badge" class="text-xs font-tech-mono text-neutral-400 mt-2">
-            EXIBINDO [ 3 ] DE [ 3 ] ARQUIVOS
+            EXIBINDO [ 4 ] DE [ 4 ] ARQUIVOS
           </p>
         </div>
 
@@ -298,27 +298,35 @@
         </button>
 
         <button 
-          onclick="setFilter('Distributed Systems', this)" 
-          data-filter="Distributed Systems"
-          class="filter-btn px-3 py-1.5 border border-neutral-800 bg-transparent text-neutral-400 hover:text-white hover:border-neutral-600 transition-all"
+          onclick="setFilter('TCC', this)" 
+          data-filter="TCC"
+          class="filter-btn px-3 py-1.5 border border-amber-400/50 bg-amber-400/10 text-amber-300 hover:text-white hover:border-amber-400 transition-all font-semibold"
         >
-          DISTRIBUTED SYSTEMS
+          ★ TCC (PRINCIPAL)
         </button>
 
         <button 
-          onclick="setFilter('FinTech', this)" 
-          data-filter="FinTech"
+          onclick="setFilter('Simulador', this)" 
+          data-filter="Simulador"
           class="filter-btn px-3 py-1.5 border border-neutral-800 bg-transparent text-neutral-400 hover:text-white hover:border-neutral-600 transition-all"
         >
-          FINTECH & BACKEND
+          SIMULADOR & EDTECH
         </button>
 
         <button 
-          onclick="setFilter('AI', this)" 
-          data-filter="AI"
+          onclick="setFilter('Full Stack', this)" 
+          data-filter="Full Stack"
           class="filter-btn px-3 py-1.5 border border-neutral-800 bg-transparent text-neutral-400 hover:text-white hover:border-neutral-600 transition-all"
         >
-          AI & FULL STACK
+          FULL STACK & APIS
+        </button>
+
+        <button 
+          onclick="setFilter('Front-End', this)" 
+          data-filter="Front-End"
+          class="filter-btn px-3 py-1.5 border border-neutral-800 bg-transparent text-neutral-400 hover:text-white hover:border-neutral-600 transition-all"
+        >
+          FRONT-END & UI
         </button>
 
         <button 
@@ -355,11 +363,11 @@
           </h3>
 
           <p class="text-lg font-editorial-serif text-neutral-300 italic leading-relaxed">
-            "Acredito que a engenharia de software alcança sua maturidade máxima quando a robustez arquitetural e a sensibilidade de design operam em uníssono. Cada sistema é uma peça de autor: estruturada para suportar alta carga sem ruído, resiliente a falhas e meticulosamente documentada."
+            "Acredito que o desenvolvimento de software alcança sua maturidade quando a solidez da engenharia e o design centrado no usuário operam em sincronia. Cada aplicação — desde o Trabalho de Conclusão de Curso até simuladores educativos complexos — é desenvolvida com atenção meticulosa à arquitetura, fluidez e impacto real."
           </p>
 
           <p class="text-sm font-editorial-sans text-neutral-400 leading-relaxed">
-            Engenheiro de Software e Desenvolvedor Full Stack especializado em arquiteturas distribuídas, microsserviços orientados a eventos, computação em nuvem e ecossistemas modernos em TypeScript, Go, Python, React e PostgreSQL. Experiência na concepção e sustentação de aplicações com altíssima concorrência, otimização de consultas e pipelines de dados de baixa latência.
+            Desenvolvedor Full Stack com sólida experiência em React, TypeScript, JavaScript, Node.js, Express, Vite, MongoDB e TailwindCSS. Especialista na criação de Single Page Applications (SPAs) de alta performance, e-commerce reativo com gerenciamento de estado dinâmico, simuladores pedagógicos com Web Audio API e serviços RESTful com banco de dados em memória.
           </p>
 
           <!-- Links de Contato & Redes -->
@@ -385,17 +393,17 @@
           <div class="space-y-4 text-xs font-tech-mono">
             <div>
               <div class="text-[10px] text-neutral-500 uppercase">CORE STACK</div>
-              <div class="text-neutral-200 mt-0.5">TypeScript, React, Node.js, Go, Python, Next.js</div>
+              <div class="text-neutral-200 mt-0.5">React, TypeScript, JavaScript, Node.js, Express, Vite, TailwindCSS</div>
             </div>
 
             <div>
-              <div class="text-[10px] text-neutral-500 uppercase">DATABASE & CACHE</div>
-              <div class="text-neutral-200 mt-0.5">PostgreSQL, Redis, Kafka, Milvus (Vector DB)</div>
+              <div class="text-[10px] text-neutral-500 uppercase">DATABASE & BACKEND</div>
+              <div class="text-neutral-200 mt-0.5">MongoDB (In-Memory), Mongoose, RESTful APIs, State Machines</div>
             </div>
 
             <div>
-              <div class="text-[10px] text-neutral-500 uppercase">INFRAESTRUTURA & DEVOPS</div>
-              <div class="text-neutral-200 mt-0.5">Docker, Kubernetes, AWS, CI/CD Actions, Linux</div>
+              <div class="text-[10px] text-neutral-500 uppercase">IMERSÃO & WEB APIS</div>
+              <div class="text-neutral-200 mt-0.5">Web Audio API, Responsive Layouts, LocalStorage Persistence, Vercel CI/CD</div>
             </div>
 
             <div>
@@ -480,11 +488,11 @@
           <div>
             <label class="a24-label">Categoria / Gênero</label>
             <select id="form-category" class="a24-input bg-[#141414] text-white">
-              <option value="Distributed Systems">Distributed Systems</option>
-              <option value="FinTech & Core Backend">FinTech & Core Backend</option>
-              <option value="AI & Full Stack">AI & Full Stack</option>
-              <option value="Cloud Architecture">Cloud Architecture</option>
-              <option value="Frontend Architecture">Frontend Architecture</option>
+              <option value="TCC & E-Commerce">TCC & E-Commerce</option>
+              <option value="Simulador & EdTech">Simulador & EdTech</option>
+              <option value="Full Stack & APIs">Full Stack & APIs</option>
+              <option value="Front-End & UI">Front-End & UI</option>
+              <option value="Web Architecture">Web Architecture</option>
             </select>
           </div>
 
@@ -552,10 +560,10 @@
           </div>
         </div>
 
-        <!-- URL de Imagem Customizada Opcional -->
+        <!-- URL ou Caminho de Imagem Customizada -->
         <div>
-          <label class="a24-label">URL da Imagem da Capa (Opcional - deixe vazio para usar o gerador vetorial A24)</label>
-          <input type="url" id="form-image" placeholder="https://images.unsplash.com/..." class="a24-input" />
+          <label class="a24-label">Caminho ou URL da Imagem da Capa (Ex: assets/projects/tcc-nana-mimi.png ou https://...)</label>
+          <input type="text" id="form-image" placeholder="assets/projects/... ou https://..." class="a24-input" />
         </div>
 
         <!-- Ações do Formulário -->

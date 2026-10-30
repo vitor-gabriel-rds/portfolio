@@ -9,83 +9,107 @@
 // =============================================================================
 const DEFAULT_PROJECTS = [
   {
-    id: "vga-proj-1",
+    id: "vga-proj-tcc",
     catalogNumber: "VGA-ENG-001",
-    title: "NEXUS HYPERGRAPH",
-    subtitle: "DISTRIBUTED GRAPH ENGINE & REAL-TIME REPLICATION",
+    title: "NANA & MIMI (TCC)",
+    subtitle: "PLATAFORMA E-COMMERCE DE MODA INFANTIL • TRABALHO DE CONCLUSÃO DE CURSO",
     year: "2026",
-    category: "Distributed Systems",
-    stack: ["TypeScript", "Rust", "Node.js", "WebSockets", "Redis", "PostgreSQL"],
-    review: "★ 5.0 — Arquitetura de microsserviços impecável com concorrência massiva e latência sub-5ms em produção.",
-    reviewer: "Senior Infrastructure Audit • High-Throughput Benchmarks",
+    category: "TCC & E-Commerce",
+    stack: ["React", "TypeScript", "Vite", "TailwindCSS", "Node.js", "SPA Architecture", "State Management"],
+    review: "★ 5.0 — Projeto Principal de Conclusão de Curso (TCC). Arquitetura SPA moderna, experiência do usuário fluida e vitrine comercial interativa.",
+    reviewer: "Banca Examinadora de TCC • Avaliação Técnica e Acadêmica",
     rating: 5.0,
-    description: "Motor de sincronização distribuída de grafos de alta performance desenvolvido para ambientes de missão crítica. Implementa tolerância a falhas bizantinas, pipeline de streaming de eventos em tempo real com Redis Streams, persistência relacional com particionamento em PostgreSQL e rotinas de computação em Rust para travessias de grafos de larga escala com centenas de milhares de conexões simultâneas.",
-    githubUrl: "https://github.com/victorgabriel/nexus-hypergraph",
-    liveDemoUrl: "https://nexus-hypergraph.dev",
-    architectureHighlight: "Event-Driven CQRS com reconciliação assíncrona",
+    description: "Trabalho de Conclusão de Curso (TCC) focado no desenvolvimento de uma plataforma completa de e-commerce voltada para o segmento de moda infantil (Nana & Mimi / Coleção Pequenos Campeões). A aplicação conta com navegação reativa em Single Page Application, vitrine com categorização dinâmica de coleções (conjuntos infantis, modelos e faixas de preço), gerenciamento de carrinho de compras em tempo real, painel de usuário e interface responsiva otimizada para alta conversão.",
+    githubUrl: "",
+    liveDemoUrl: "https://tccatualizacao.vercel.app/",
+    architectureHighlight: "Single Page Application reativa com gerenciamento centralizado de estado e catálogo sob demanda",
     metrics: {
-      throughput: "120,000 ops/sec",
-      latency: "3.4ms p99",
-      availability: "99.995%",
-      coverage: "98% E2E"
-    },
-    posterTheme: "monolith",
-    customImageUrl: ""
-  },
-  {
-    id: "vga-proj-2",
-    catalogNumber: "VGA-ENG-002",
-    title: "CHRONOS KERNEL",
-    subtitle: "EVENT-SOURCED FINANCIAL LEDGER & AUDIT ENGINE",
-    year: "2025",
-    category: "FinTech & Core Backend",
-    stack: ["Go", "React 19", "Next.js", "Kafka", "PostgreSQL", "Docker", "AWS"],
-    review: "★ 4.9 — Alta resiliência transacional; processamento assíncrono de milhões de transações sem perda de integridade.",
-    reviewer: "FinTech Security & Standards Committee",
-    rating: 4.9,
-    description: "Core bancário e ledger distribuído de liquidação financeira baseado nos padrões Event Sourcing e CQRS. Processa transferências com integridade criptográfica encadeada via hashes SHA-256 imutáveis, controle concorrente lock-free em memória, monitoramento em tempo real com Kafka e interface analítica de conciliação construída em React 19.",
-    githubUrl: "https://github.com/victorgabriel/chronos-kernel",
-    liveDemoUrl: "https://chronos-kernel.io",
-    architectureHighlight: "Ledger de eventos imutáveis com assinatura SHA-256",
-    metrics: {
-      throughput: "45,000 tx/sec",
-      latency: "8.1ms p99",
-      availability: "99.999%",
-      coverage: "95% Unit/Integration"
+      throughput: "100% Responsivo",
+      latency: "< 40ms Render",
+      availability: "99.9% Vercel",
+      coverage: "Nota Máxima TCC"
     },
     posterTheme: "gold",
-    customImageUrl: ""
+    customImageUrl: "assets/projects/tcc-nana-mimi.png"
   },
   {
-    id: "vga-proj-3",
-    catalogNumber: "VGA-ENG-003",
-    title: "AETHER SYNAPSE",
-    subtitle: "MULTIMODAL NEURAL ORCHESTRATOR & VECTOR SEARCH",
-    year: "2024",
-    category: "AI & Full Stack",
-    stack: ["Python", "FastAPI", "React", "PyTorch", "TailwindCSS", "Milvus", "Docker"],
-    review: "★ 5.0 — Pipeline de inferência neural ultra-otimizado com quantized embeddings e interface editorial elegante.",
-    reviewer: "Machine Learning Systems Review • SOTD Tech",
+    id: "vga-proj-entregador",
+    catalogNumber: "VGA-ENG-002",
+    title: "NA PELE DO ENTREGADOR",
+    subtitle: "SIMULADOR PEDAGÓGICO DE SOCIOLOGIA DA GIG ECONOMY",
+    year: "2026",
+    category: "Simulador & EdTech",
+    stack: ["JavaScript", "HTML5", "CSS3 Moderno", "Web Audio API", "Game Engine", "Sociologia do Trabalho"],
+    review: "★ 5.0 — Experiência provocativa e imersiva que traduz dinâmicas algorítmicas e a precarização do trabalho em mecânicas lúdicas de impacto pedagógico.",
+    reviewer: "Projeto Educativo de Sociologia do Trabalho",
     rating: 5.0,
-    description: "Orquestrador de modelos neurais fundacionais e pipeline de busca vetorial semântica para documentos jurídicos e técnicos em larga escala. Oferece streaming de respostas com tokenização assíncrona, reranking híbrido via Cross-Encoder e uma interface de workspace com design editorial minimalista construída com TailwindCSS e aceleração por hardware.",
-    githubUrl: "https://github.com/victorgabriel/aether-synapse",
-    liveDemoUrl: "https://aether-synapse.ai",
-    architectureHighlight: "Pipeline Híbrido Denso/Esparso com Milvus & INT8 Quantization",
+    description: "Simulador pedagógico e jogo interativo de tomada de decisão sobre a uberização e a precarização na gig economy. O usuário vivencia uma jornada de 12 horas como entregador de aplicativo, escolhendo entre modais de trabalho (moto alugada ou bicicleta própria) e enfrentando eventos críticos como gestão algorítmica arbitrária, chuva torrencial, quebra de veículo, metas opacas e ausência de direitos CLT. Conta com efeitos sonoros via Web Audio API e glossário sociológico integrado.",
+    githubUrl: "",
+    liveDemoUrl: "https://na-pele-do-entregador.vercel.app/",
+    architectureHighlight: "Máquina de estados finitos com simulação de eventos estocásticos e síntese de áudio web",
     metrics: {
-      throughput: "1,400 queries/s",
-      latency: "42ms neural inference",
-      availability: "99.95%",
-      coverage: "94% PyTest"
+      throughput: "60 FPS Game Loop",
+      latency: "Instantâneo",
+      availability: "100% Web Native",
+      coverage: "Simulação Completa"
     },
-    posterTheme: "emerald",
-    customImageUrl: ""
+    posterTheme: "monolith",
+    customImageUrl: "assets/projects/na-pele-do-entregador.png"
+  },
+  {
+    id: "vga-proj-cinecatalogo",
+    catalogNumber: "VGA-ENG-003",
+    title: "CINECATÁLOGO",
+    subtitle: "GERENCIADOR DE FILMES EM MEMÓRIA & API FULL STACK",
+    year: "2026",
+    category: "Full Stack & APIs",
+    stack: ["Node.js", "Express", "MongoDB In-Memory", "Mongoose", "JavaScript", "Dark UI / CSS3"],
+    review: "★ 4.9 — Aplicação completa com backend ágil em memória, endpoints RESTful eficientes, busca instantânea e interface dark mode cinematográfica.",
+    reviewer: "Full Stack Systems & API Benchmark Review",
+    rating: 4.9,
+    description: "Aplicação web completa para gerenciamento e exploração de catálogo de filmes com backend Node.js e banco de dados MongoDB em memória (In-Memory). Implementa operações CRUD completas, filtragem por gênero, busca instantânea por múltiplos campos (título, diretor, gênero) e ordenação dinâmica (recentes, ano e ordem alfabética). Interface moderna com visual cinematográfico.",
+    githubUrl: "",
+    liveDemoUrl: "https://filmes-ad.vercel.app/",
+    architectureHighlight: "CRUD completo com Mongoose, banco de dados em memória e endpoints RESTful",
+    metrics: {
+      throughput: "In-Memory Engine",
+      latency: "< 15ms Query",
+      availability: "Vercel Serverless",
+      coverage: "CRUD Completo"
+    },
+    posterTheme: "noir",
+    customImageUrl: "assets/projects/cinecatalogo.png"
+  },
+  {
+    id: "vga-proj-fastshop",
+    catalogNumber: "VGA-ENG-004",
+    title: "FAST SHOP — VITRINE DIGITAL",
+    subtitle: "CATÁLOGO INTERATIVO DE ELETRÔNICOS E ELETRODOMÉSTICOS",
+    year: "2026",
+    category: "Front-End & UI",
+    stack: ["React", "Vite", "JavaScript", "TailwindCSS", "Component-Driven", "Responsive UI"],
+    review: "★ 4.8 — Interface limpa, responsiva e focada na experiência de navegação e visualização de produtos e ofertas de varejo.",
+    reviewer: "Front-End Engineering & UX Audit",
+    rating: 4.8,
+    description: "Aplicação front-end desenvolvida com React e Vite simulando a vitrine virtual interativa da Fast Shop. O sistema permite alternar com agilidade entre as categorias de 'Eletrônicos' e 'Eletrodomésticos', exibindo produtos em destaque com preços formatados e diagramação limpa e moderna focada em conversão e usabilidade.",
+    githubUrl: "",
+    liveDemoUrl: "https://ad1trigustavo.vercel.app/",
+    architectureHighlight: "Componentização modular em React com renderização condicional e build ultra-rápido com Vite",
+    metrics: {
+      throughput: "Vite Bundled",
+      latency: "< 30ms TTFB",
+      availability: "99.9% Vercel",
+      coverage: "100% Responsivo"
+    },
+    posterTheme: "silver",
+    customImageUrl: "assets/projects/fast-shop.png"
   }
 ];
 
 // =============================================================================
 // 2. GERENCIADOR DE ESTADO E LOCALSTORAGE
 // =============================================================================
-const STORAGE_KEY = "vga_a24_software_archive_v1";
+const STORAGE_KEY = "vga_a24_software_archive_v2";
 
 class ArchiveStore {
   constructor() {
@@ -101,13 +125,16 @@ class ArchiveStore {
       if (stored) {
         const parsed = JSON.parse(stored);
         if (Array.isArray(parsed) && parsed.length > 0) {
-          return parsed;
+          const hasOldDummies = parsed.some(p => p.id === "vga-proj-1" || p.title === "NEXUS HYPERGRAPH");
+          if (!hasOldDummies) {
+            return parsed;
+          }
         }
       }
     } catch (e) {
       console.warn("Erro ao carregar do LocalStorage:", e);
     }
-    // Caso não exista ou esteja corrompido, salva os padrões
+    // Caso não exista ou tenha projetos antigos, salva os padrões atualizados
     this.save(DEFAULT_PROJECTS);
     return [...DEFAULT_PROJECTS];
   }
@@ -449,8 +476,10 @@ function renderStage() {
 
   // Gera poster visual
   const posterVisual = current.customImageUrl 
-    ? `<img src="${current.customImageUrl}" alt="${current.title}" class="w-full h-full object-cover">`
+    ? `<img src="${current.customImageUrl}" alt="${current.title}" class="w-full h-full object-cover object-top">`
     : generatePosterSvg(current.title, current.year, current.catalogNumber, current.posterTheme || "monolith");
+
+  const isTcc = current.id === "vga-proj-tcc" || (current.category && current.category.includes("TCC")) || (current.title && current.title.includes("TCC"));
 
   // Renderiza Estojo e Disco Físico com efeito holográfico
   stageWrapper.innerHTML = `
@@ -460,12 +489,12 @@ function renderStage() {
       <div class="optical-disc" id="stage-optical-disc">
         <div class="disc-spindle-clear"></div>
         <div class="disc-text-ring">
-          <span>${current.catalogNumber} • 2026 ARCHIVE</span>
+          <span>${current.catalogNumber} • ${isTcc ? '★ PROJETO PRINCIPAL (TCC)' : '2026 ARCHIVE'}</span>
         </div>
       </div>
 
       <!-- Estojo Físico (Jewel Case / Sleeve) -->
-      <div class="media-case rounded-none overflow-hidden" onclick="openDetailsModal('${current.id}')">
+      <div class="media-case rounded-none overflow-hidden ${isTcc ? 'ring-2 ring-amber-400/50 shadow-[0_30px_70px_rgba(197,160,89,0.2)]' : ''}" onclick="openDetailsModal('${current.id}')">
         <div class="w-full h-full relative">
           ${posterVisual}
           
@@ -476,6 +505,12 @@ function renderStage() {
           <div class="absolute bottom-4 right-4 bg-black/80 backdrop-blur border border-white/20 px-2 py-1 text-[9px] font-tech-mono uppercase tracking-widest text-neutral-300">
             INSPECT CASE ℹ
           </div>
+
+          ${isTcc ? `
+            <div class="absolute top-3 right-3 bg-amber-400 text-black px-2 py-0.5 text-[9px] font-tech-mono font-bold uppercase tracking-wider shadow-lg">
+              ★ TCC PRINCIPAL
+            </div>
+          ` : ''}
         </div>
       </div>
 
@@ -493,12 +528,13 @@ function renderStage() {
     <div class="space-y-6">
       
       <!-- Categoria & Catálogo -->
-      <div class="flex items-center gap-3 text-xs font-tech-mono text-neutral-400">
+      <div class="flex flex-wrap items-center gap-3 text-xs font-tech-mono text-neutral-400">
         <span class="text-amber-400 font-semibold">[ ${current.catalogNumber} ]</span>
         <span>•</span>
         <span class="uppercase tracking-widest text-neutral-300">${current.category}</span>
         <span>•</span>
         <span class="text-neutral-500">ANO ${current.year}</span>
+        ${isTcc ? `<span class="px-2.5 py-1 text-[10px] font-bold bg-amber-400 text-black uppercase tracking-wider ml-auto">★ PROJETO PRINCIPAL (TCC)</span>` : ''}
       </div>
 
       <!-- Título em Alta Caixa Editorial A24 -->
@@ -552,7 +588,7 @@ function renderStage() {
       <div class="pt-4 flex flex-wrap items-center gap-3 border-t border-neutral-900">
         ${current.liveDemoUrl ? `
           <a href="${current.liveDemoUrl}" target="_blank" rel="noopener noreferrer" class="btn-a24-primary" onclick="soundEngine.playMechanicalClick()">
-            <span>LIVE DEMO</span>
+            <span>ACESSAR PROJETO NO VERCEL</span>
             <svg class="w-3.5 h-3.5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
           </a>
         ` : ''}
@@ -611,8 +647,10 @@ function renderGrid() {
   }
 
   gridContainer.innerHTML = filtered.map((project, index) => {
+    const isTcc = project.id === "vga-proj-tcc" || (project.category && project.category.includes("TCC")) || (project.title && project.title.includes("TCC"));
+
     const posterVisual = project.customImageUrl
-      ? `<img src="${project.customImageUrl}" alt="${project.title}" class="w-full h-full object-cover">`
+      ? `<img src="${project.customImageUrl}" alt="${project.title}" class="w-full h-full object-cover object-top">`
       : generatePosterSvg(project.title, project.year, project.catalogNumber, project.posterTheme || "monolith");
 
     const stackChips = project.stack.slice(0, 4).map(s => `
@@ -621,20 +659,30 @@ function renderGrid() {
       </span>
     `).join("");
 
+    const cardBorder = isTcc ? 'border-amber-500/50 shadow-[0_0_25px_rgba(197,160,89,0.15)] ring-1 ring-amber-500/30' : '';
+
     return `
-      <article class="editorial-poster-card flex flex-col justify-between group">
+      <article class="editorial-poster-card flex flex-col justify-between group ${cardBorder}">
         
         <!-- Header do Card -->
         <div class="p-4 border-b border-neutral-900 flex items-center justify-between text-[10px] font-tech-mono text-neutral-400">
-          <span class="text-amber-400/90">${project.catalogNumber}</span>
-          <span class="uppercase tracking-wider truncate max-w-[150px]">${project.category}</span>
+          <span class="text-amber-400/90 font-semibold">${project.catalogNumber}</span>
+          ${isTcc 
+            ? `<span class="px-2 py-0.5 bg-amber-400/20 text-amber-300 border border-amber-400/50 font-bold uppercase tracking-wider">★ PROJETO PRINCIPAL (TCC)</span>`
+            : `<span class="uppercase tracking-wider truncate max-w-[150px]">${project.category}</span>`
+          }
           <span>${project.year}</span>
         </div>
 
         <!-- Área Visual / Capa do Filme-Projeto -->
-        <div class="poster-visual-wrapper cursor-pointer" onclick="openDetailsModal('${project.id}')">
+        <div class="poster-visual-wrapper cursor-pointer relative" onclick="openDetailsModal('${project.id}')">
           ${posterVisual}
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity"></div>
+          ${isTcc ? `
+            <div class="absolute bottom-2 left-2 bg-black/85 backdrop-blur border border-amber-400/60 text-amber-300 px-2 py-0.5 text-[9px] font-tech-mono font-bold uppercase tracking-wider">
+              DESTAQUE TCC
+            </div>
+          ` : ''}
         </div>
 
         <!-- Conteúdo do Pôster -->
@@ -675,8 +723,8 @@ function renderGrid() {
           <div class="pt-3 border-t border-neutral-900 flex items-center justify-between">
             <div class="flex items-center gap-2">
               ${project.liveDemoUrl ? `
-                <a href="${project.liveDemoUrl}" target="_blank" rel="noopener noreferrer" class="text-xs font-tech-mono text-white hover:text-amber-400 flex items-center gap-1 transition-colors" title="Live Demo">
-                  <span>DEMO</span> ↗
+                <a href="${project.liveDemoUrl}" target="_blank" rel="noopener noreferrer" class="text-xs font-tech-mono text-white hover:text-amber-400 flex items-center gap-1 transition-colors font-semibold" title="Acessar Projeto no Vercel">
+                  <span>ACESSAR PROJETO</span> ↗
                 </a>
               ` : ''}
               ${project.githubUrl ? `
@@ -897,8 +945,10 @@ function openDetailsModal(id) {
   const mount = document.getElementById("details-modal-mount");
   if (!modal || !mount) return;
 
+  const isTcc = project.id === "vga-proj-tcc" || (project.category && project.category.includes("TCC")) || (project.title && project.title.includes("TCC"));
+
   const posterVisual = project.customImageUrl
-    ? `<img src="${project.customImageUrl}" alt="${project.title}" class="w-full h-full object-cover">`
+    ? `<img src="${project.customImageUrl}" alt="${project.title}" class="w-full h-full object-cover object-top">`
     : generatePosterSvg(project.title, project.year, project.catalogNumber, project.posterTheme || "monolith");
 
   const stackChips = project.stack.map(st => `
@@ -912,8 +962,13 @@ function openDetailsModal(id) {
       
       <!-- Coluna Visual / Pôster -->
       <div class="md:col-span-5 relative border border-neutral-800">
-        <div class="aspect-[16/11] md:aspect-[3/4] overflow-hidden">
+        <div class="aspect-[16/11] md:aspect-[3/4] overflow-hidden relative">
           ${posterVisual}
+          ${isTcc ? `
+            <div class="absolute top-3 left-3 bg-amber-400 text-black px-2 py-0.5 text-[10px] font-tech-mono font-bold uppercase tracking-wider shadow-md">
+              ★ PROJETO PRINCIPAL (TCC)
+            </div>
+          ` : ''}
         </div>
         <div class="p-3 bg-neutral-950 border-t border-neutral-800 flex justify-between text-[10px] font-tech-mono text-neutral-500 uppercase">
           <span>SPEC SHEET: ${project.catalogNumber}</span>
@@ -925,12 +980,15 @@ function openDetailsModal(id) {
       <div class="md:col-span-7 space-y-6">
         
         <div>
-          <div class="text-xs font-tech-mono text-amber-400 mb-1">[ ${project.catalogNumber} // RELEASE ${project.year} ]</div>
+          <div class="flex items-center gap-3 text-xs font-tech-mono text-amber-400 mb-1">
+            <span>[ ${project.catalogNumber} // RELEASE ${project.year} ]</span>
+            ${isTcc ? `<span class="px-2 py-0.5 bg-amber-400 text-black font-bold text-[9px] uppercase tracking-wider">PROJETO PRINCIPAL</span>` : ''}
+          </div>
           <h2 class="text-3xl md:text-4xl font-editorial-title font-bold text-white tracking-widest">
             ${project.title}
           </h2>
           <p class="text-xs font-tech-mono uppercase tracking-widest text-neutral-400 mt-1">
-            ${project.category} • DIRECTED BY VICTOR GABRIEL ARVELLOS
+            ${project.category} • DESENVOLVIDO POR VICTOR GABRIEL ARVELLOS
           </p>
         </div>
 
@@ -979,7 +1037,7 @@ function openDetailsModal(id) {
         <div class="pt-4 border-t border-neutral-800 flex flex-wrap items-center gap-3">
           ${project.liveDemoUrl ? `
             <a href="${project.liveDemoUrl}" target="_blank" rel="noopener noreferrer" class="btn-a24-primary">
-              VER LIVE DEMO ↗
+              ACESSAR PROJETO NO VERCEL ↗
             </a>
           ` : ''}
           ${project.githubUrl ? `
@@ -1052,10 +1110,10 @@ function clearFilters() {
 // 11. REDEFINIÇÃO PARA OS PADRÕES (RESET TO DEFAULTS)
 // =============================================================================
 function resetArchive() {
-  const confirmed = confirm("Deseja restaurar os projetos originais curados (Nexus Hypergraph, Chronos Kernel, Aether Synapse)? Quaisquer projetos adicionados manualmente serão redefinidos.");
+  const confirmed = confirm("Deseja restaurar os 4 projetos originais (TCC Nana & Mimi, Na Pele do Entregador, CineCatálogo, Fast Shop)? Quaisquer edições manuais serão redefinidas.");
   if (confirmed) {
     store.reset();
-    showToast("Arquivo restaurado para os projetos originais curados!", "info");
+    showToast("Arquivo restaurado para os 4 projetos originais!", "info");
     renderStage();
     renderGrid();
   }

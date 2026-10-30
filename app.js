@@ -413,6 +413,50 @@ function getCinematicLaurelWreath() {
 // =============================================================================
 // 5. TOAST NOTIFICATIONS
 // =============================================================================
+
+window.copyToClipboard = function(text, label = 'Item') {
+  if (window.soundEngine) soundEngine.playMechanicalClick();
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(() => {
+      showToast(label + ' copiado: ' + text, 'success');
+    }).catch(() => {
+      fallbackCopy(text, label);
+    });
+  } else {
+    fallbackCopy(text, label);
+  }
+};
+
+function fallbackCopy(text, label) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  try {
+    document.execCommand('copy');
+    showToast(label + ' copiado: ' + text, 'success');
+  } catch (err) {
+    showToast('Erro ao copiar', 'danger');
+  }
+  document.body.removeChild(ta);
+}
+
+window.handleQuickMessage = function(e) {
+  e.preventDefault();
+  const name = document.getElementById('quick-name')?.value.trim() || '';
+  const msg = document.getElementById('quick-message')?.value.trim() || '';
+  if (!msg) {
+    showToast('Por favor, digite sua mensagem.', 'danger');
+    return;
+  }
+  const textEncoded = encodeURIComponent('Olá Victor! Meu nome é ' + (name || 'um visitante') + '. Vi seu portfólio e gostaria de falar sobre: ' + msg);
+  const whatsappUrl = 'https://wa.me/5519916801102?text=' + textEncoded;
+  window.open(whatsappUrl, '_blank');
+  showToast('Abrindo conversa no WhatsApp...', 'success');
+};
+
 function showToast(message, type = "info") {
   const container = document.getElementById("toast-container");
   if (!container) return;

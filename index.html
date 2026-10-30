@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Victor Gabriel Arvellos — Software Engineer & Full Stack Developer</title>
-  <meta name="description" content="Portfólio de engenharia de software e desenvolvimento full-stack com estética editorial A24 inspirado em a24.raviklaassens.com" />
+  <meta name="description" content="Portfólio de Victor Gabriel Arvellos — Desenvolvedor Full Stack e Engenheiro de Software com estética editorial A24." />
 
   <!-- Tailwind CSS CDN com suporte a modo dark e plugins -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -48,13 +48,17 @@
        1. TOP TICKER & STATUS BAR (ESTILO CATÁLOGO DE FESTIVAL / A24)
        ========================================================================= -->
   <div class="border-b border-hairline bg-[#0d0d0d] text-[10px] font-tech-mono text-neutral-400 py-1.5 px-4 md:px-8 flex flex-wrap items-center justify-between gap-4 z-40 relative">
-    <div class="flex items-center gap-4">
+    <div class="flex items-center gap-4 flex-wrap">
       <div class="flex items-center gap-2">
         <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-        <span class="text-neutral-200 tracking-wider font-semibold">STATUS: DISPONÍVEL PARA CONTRATOS & ARQUITETURA</span>
+        <span class="text-neutral-200 tracking-wider font-semibold">STATUS: DISPONÍVEL PARA CONTRATOS & PROJETOS</span>
       </div>
       <span class="text-neutral-600 hidden sm:inline">|</span>
       <span class="hidden sm:inline text-neutral-400">SÃO PAULO, BR — <span id="live-clock" class="text-neutral-200">12:00:00 BRT</span></span>
+      <span class="text-neutral-600 hidden md:inline">|</span>
+      <a href="mailto:viarvellos@gmail.com" class="hidden md:inline hover:text-white text-neutral-300 transition-colors">✉ viarvellos@gmail.com</a>
+      <a href="https://wa.me/5519916801102" target="_blank" rel="noopener noreferrer" class="hidden lg:inline hover:text-emerald-400 text-neutral-300 transition-colors">💬 (19) 91680-1102</a>
+      <a href="https://instagram.com/viitorkkjk" target="_blank" rel="noopener noreferrer" class="hidden xl:inline hover:text-pink-400 text-neutral-300 transition-colors">📸 @viitorkkjk</a>
     </div>
 
     <div class="flex items-center gap-4 ml-auto">
@@ -75,14 +79,14 @@
       </button>
 
       <!-- Reset Archive to Default -->
-      <button onclick="resetArchive()" class="hover:text-amber-400 transition-colors cursor-pointer text-neutral-500 hover:border-amber-400" title="Restaurar projetos originais de exemplo">
+      <button onclick="resetArchive()" class="hover:text-amber-400 transition-colors cursor-pointer text-neutral-500 hover:border-amber-400" title="Restaurar os 4 projetos originais">
         [ RESTAURAR PADRÕES ]
       </button>
     </div>
   </div>
 
   <!-- =========================================================================
-       2. CABEÇALHO PRINCIPAL COM IDENTIDADE EDITORIAL
+       2. CABEÇALHO PRINCIPAL COM IDENTIDADE EDITORIAL (3 PARTES: SOBRE MIM, PROJETOS, CONTATO)
        ========================================================================= -->
   <header class="border-b border-hairline sticky top-0 bg-[#0a0a0a]/90 backdrop-blur-md z-30 transition-all">
     <div class="max-w-7xl mx-auto px-4 md:px-8 py-5 flex items-center justify-between">
@@ -97,16 +101,16 @@
         </p>
       </a>
 
-      <!-- Menu de Navegação & Ações -->
+      <!-- Menu de Navegação nas 3 Partes Solicitadas -->
       <div class="flex items-center gap-4 sm:gap-6">
-        <nav class="hidden md:flex items-center gap-6 text-xs font-tech-mono tracking-widest text-neutral-400">
-          <a href="#stage-section" class="hover:text-white transition-colors">01. PALCO</a>
-          <a href="#catalog-section" class="hover:text-white transition-colors">02. CATÁLOGO</a>
-          <a href="#colophon-section" class="hover:text-white transition-colors">03. BIO & COLOPHON</a>
+        <nav class="flex items-center gap-4 sm:gap-8 text-xs font-tech-mono tracking-widest text-neutral-400">
+          <a href="#sobre-mim" class="hover:text-white transition-colors py-1">01. SOBRE MIM</a>
+          <a href="#projetos" class="hover:text-white transition-colors py-1">02. PROJETOS</a>
+          <a href="#contato" class="hover:text-white transition-colors py-1 text-amber-300/90 hover:text-amber-200">03. CONTATO</a>
         </nav>
 
-        <!-- Botão Principal: Adicionar Novo Projeto (Abre Modal de Gerenciamento) -->
-        <button onclick="openCreateModal()" class="btn-a24-primary" title="Adicionar novo projeto ao arquivo">
+        <!-- Botão: Adicionar Novo Projeto (Modal CRUD) -->
+        <button onclick="openCreateModal()" class="btn-a24-primary hidden sm:inline-flex" title="Adicionar novo projeto ao arquivo">
           <span class="mr-1.5 text-base leading-none font-bold">+</span>
           <span>NOVO PROJETO</span>
         </button>
@@ -116,9 +120,9 @@
   </header>
 
   <!-- =========================================================================
-       3. HERO MANIFESTO & AVALIAÇÃO DA CRÍTICA DE CÓDIGO
+       PARTE 1: SOBRE MIM (HERO MANIFESTO + BIO APROFUNDADA + FICHA TÉCNICA)
        ========================================================================= -->
-  <section class="border-b border-hairline py-16 md:py-24 px-4 md:px-8 bg-gradient-to-b from-[#0e0e0e] to-[#0a0a0a] relative overflow-hidden">
+  <section id="sobre-mim" class="border-b border-hairline py-16 md:py-24 px-4 md:px-8 bg-gradient-to-b from-[#0e0e0e] to-[#0a0a0a] relative overflow-hidden">
     
     <!-- Linhas decorativas sutis de fundo -->
     <div class="absolute inset-0 pointer-events-none opacity-10">
@@ -135,9 +139,9 @@
       
       <!-- Badge de Laurel de Festival / Code Excellence -->
       <div class="inline-flex items-center gap-2 px-3 py-1 bg-neutral-950 border border-neutral-800 text-[10px] font-tech-mono text-amber-300 tracking-[0.2em] uppercase mb-8">
-        <span>★ OFFICIAL SELECTION</span>
+        <span>★ 01. SOBRE MIM</span>
         <span>•</span>
-        <span>HIGH CONCURRENCY ARCHITECTURE & DIGITAL CRAFT</span>
+        <span>FULL STACK DEVELOPER & SOFTWARE CRAFT</span>
       </div>
 
       <!-- Título Manifesto em Tipografia A24 -->
@@ -145,38 +149,99 @@
         ENGENHARIA DE SOFTWARE COM O RIGOR DA ESTÉTICA DE AUTOR.
       </h2>
 
-      <!-- Avaliação Técnica em Destaque (Adaptado de Crítica de Cinema para Código) -->
-      <div class="mt-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-end border-t border-hairline pt-8">
+      <!-- Avaliação Técnica em Destaque + Bio + Ficha Técnica -->
+      <div class="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start border-t border-hairline pt-10">
         
-        <div class="md:col-span-7">
+        <!-- Coluna de Apresentação e Bio -->
+        <div class="lg:col-span-7 space-y-6">
           <div class="flex items-start gap-4">
             <!-- Laurel Wreath Icon -->
-            <svg class="w-12 h-12 text-amber-400 shrink-0 opacity-80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <svg class="w-12 h-12 text-amber-400 shrink-0 opacity-80 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
               <path d="M12 21c-4.97 0-9-4.03-9-9 0-3.15 1.63-5.91 4.09-7.5M12 21c4.97 0 9-4.03 9-9 0-3.15-1.63-5.91-4.09-7.5M8 6.5C8 7.88 9.12 9 10.5 9S13 7.88 13 6.5 11.88 4 10.5 4 8 5.12 8 6.5zm5.5 0c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5-1.12-2.5-2.5-2.5-2.5 1.12-2.5 2.5z"/>
             </svg>
             <div>
               <blockquote class="font-editorial-serif text-xl sm:text-2xl text-neutral-200 italic leading-snug">
-                "★ 5.0 — Arquitetura de microsserviços impecável, tolerância a falhas e interfaces que equilibram precisão matemática com elegância visual."
+                "★ 5.0 — Aplicações completas com alta qualidade de código, interfaces responsivas, ricas em interatividade e experiências centradas no usuário."
               </blockquote>
               <p class="mt-2 text-xs font-tech-mono uppercase tracking-widest text-neutral-400">
-                — AUDITORIA DE SISTEMAS & BENCHMARK DE PERFORMANCE • 2026
+                — AVALIAÇÃO TÉCNICA & PROJETOS EM PRODUÇÃO • 2026
               </p>
             </div>
           </div>
+
+          <div class="space-y-4 text-sm font-editorial-sans text-neutral-300 leading-relaxed border-t border-neutral-900 pt-6">
+            <p>
+              Olá! Sou o <strong class="text-white font-semibold">Victor Gabriel Arvellos</strong>, desenvolvedor Full Stack focado na concepção e desenvolvimento de aplicações web modernas, reativas e com arquitetura sólida.
+            </p>
+            <p>
+              Minha experiência abrange desde o desenvolvimento do meu <strong class="text-amber-300">Trabalho de Conclusão de Curso (TCC)</strong> — uma plataforma de e-commerce completa voltada para o segmento de moda infantil com catálogo dinâmico e gerenciamento de estado — até simuladores pedagógicos com Web Audio API, gerenciadores de dados com MongoDB em memória e interfaces de alta performance construídas com React e Vite.
+            </p>
+            <p class="text-neutral-400 text-xs font-tech-mono">
+              // FILOSOFIA: "Acredito que um software de excelência equilibra robustez na camada de regras de negócio com uma sensibilidade estética de alto padrão e fluidez absoluta de uso."
+            </p>
+          </div>
+
+          <!-- Botões de Ação Rápida da Bio -->
+          <div class="pt-4 flex flex-wrap items-center gap-3 text-xs font-tech-mono">
+            <a href="#projetos" class="btn-a24-primary">
+              02. VER MEUS PROJETOS ↓
+            </a>
+            <a href="#contato" class="btn-a24-outline">
+              03. ENTRAR EM CONTATO ✉
+            </a>
+            <a href="https://wa.me/5519916801102?text=Ol%C3%A1%20Victor!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener noreferrer" class="btn-a24-outline text-emerald-400 border-emerald-500/40 hover:bg-emerald-500/10">
+              WHATSAPP: (19) 91680-1102 ↗
+            </a>
+          </div>
         </div>
 
-        <div class="md:col-span-5 md:border-l md:border-hairline md:pl-8 space-y-2 text-xs font-tech-mono text-neutral-400">
-          <div class="flex justify-between py-1 border-b border-neutral-900">
-            <span class="text-neutral-500 uppercase">ENGENHEIRO / DIRETOR:</span>
-            <span class="text-neutral-200 font-semibold">Victor Gabriel Arvellos</span>
-          </div>
-          <div class="flex justify-between py-1 border-b border-neutral-900">
-            <span class="text-neutral-500 uppercase">STACK PRINCIPAL:</span>
-            <span class="text-neutral-200">React • TypeScript • Node.js • Vite • MongoDB</span>
-          </div>
-          <div class="flex justify-between py-1">
-            <span class="text-neutral-500 uppercase">SISTEMA DE PERSISTÊNCIA:</span>
-            <span class="text-neutral-200">LocalStorage CRUD Ativo</span>
+        <!-- Coluna Ficha Técnica do Desenvolvedor (Credits Crawl) -->
+        <div class="lg:col-span-5 bg-neutral-950 p-6 md:p-8 border border-neutral-800 space-y-5">
+          <h4 class="text-xs font-tech-mono uppercase tracking-[0.2em] text-neutral-400 border-b border-neutral-800 pb-3 flex items-center justify-between">
+            <span>// FICHA TÉCNICA DE AUTOR</span>
+            <span class="text-amber-400 text-[10px]">VOL. 2026</span>
+          </h4>
+
+          <div class="space-y-3.5 text-xs font-tech-mono">
+            <div class="flex justify-between py-1 border-b border-neutral-900">
+              <span class="text-neutral-500 uppercase">ENGENHEIRO / AUTOR:</span>
+              <span class="text-neutral-200 font-semibold">Victor Gabriel Arvellos</span>
+            </div>
+
+            <div class="flex justify-between py-1 border-b border-neutral-900">
+              <span class="text-neutral-500 uppercase">E-MAIL:</span>
+              <a href="mailto:viarvellos@gmail.com" class="text-amber-300 hover:underline">viarvellos@gmail.com</a>
+            </div>
+
+            <div class="flex justify-between py-1 border-b border-neutral-900">
+              <span class="text-neutral-500 uppercase">WHATSAPP:</span>
+              <a href="https://wa.me/5519916801102" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:underline">(19) 91680-1102</a>
+            </div>
+
+            <div class="flex justify-between py-1 border-b border-neutral-900">
+              <span class="text-neutral-500 uppercase">INSTAGRAM:</span>
+              <a href="https://instagram.com/viitorkkjk" target="_blank" rel="noopener noreferrer" class="text-neutral-200 hover:text-white">@viitorkkjk</a>
+            </div>
+
+            <div class="pt-2">
+              <div class="text-[10px] text-neutral-500 uppercase">CORE FRONT-END</div>
+              <div class="text-neutral-200 mt-0.5">React, TypeScript, JavaScript, Vite, TailwindCSS, HTML5/CSS3</div>
+            </div>
+
+            <div>
+              <div class="text-[10px] text-neutral-500 uppercase">CORE BACK-END & DADOS</div>
+              <div class="text-neutral-200 mt-0.5">Node.js, Express, MongoDB (In-Memory), Mongoose, RESTful APIs</div>
+            </div>
+
+            <div>
+              <div class="text-[10px] text-neutral-500 uppercase">ESPECIALIDADES & FOCO</div>
+              <div class="text-neutral-200 mt-0.5">Single Page Applications (SPAs), E-Commerce (TCC), Simuladores Interativos & Web Audio API</div>
+            </div>
+
+            <div class="pt-3 border-t border-neutral-900 flex justify-between text-[10px] text-neutral-500">
+              <span>LOCALIZAÇÃO: SÃO PAULO, BR</span>
+              <span class="text-emerald-400">DISPONÍVEL</span>
+            </div>
           </div>
         </div>
 
@@ -186,19 +251,22 @@
   </section>
 
   <!-- =========================================================================
-       4. PALCO INTERATIVO DE MÍDIA FÍSICA (SHOWCASE A24 / RAVI KLAASSENS)
+       PARTE 2: PROJETOS (PALCO DE MÍDIA FÍSICA + CATÁLOGO COMPLETO)
        ========================================================================= -->
-  <section id="stage-section" class="border-b border-hairline py-16 px-4 md:px-8 bg-[#0a0a0a] relative">
+  <section id="projetos" class="border-b border-hairline py-16 px-4 md:px-8 bg-[#0a0a0a] relative">
     
     <div class="max-w-7xl mx-auto">
       
-      <!-- Cabeçalho da Seção de Palco -->
+      <!-- Cabeçalho Principal da Seção de Projetos -->
       <div class="flex flex-wrap items-center justify-between pb-6 border-b border-hairline gap-4">
         <div>
-          <span class="text-xs font-tech-mono text-amber-400 tracking-[0.2em] uppercase">[ 01. PALCO PRINCIPAL ]</span>
+          <span class="text-xs font-tech-mono text-amber-400 tracking-[0.2em] uppercase">[ 02. PROJETOS ]</span>
           <h3 class="text-2xl md:text-3xl font-editorial-title text-white tracking-widest mt-1">
-            PHYSICAL ARCHIVE EXHIBITION
+            TRABALHOS SELECIONADOS & SOFTWARE ARCHIVE
           </h3>
+          <p class="text-xs font-tech-mono text-neutral-400 mt-1">
+            PROJETO PRINCIPAL: <span class="text-amber-300 font-semibold">TCC NANA & MIMI</span> • 4 APLICAÇÕES PUBLICADAS NO VERCEL
+          </p>
         </div>
 
         <!-- Controles de Navegação do Palco (Anterior, Próximo e Contador) -->
@@ -246,202 +314,326 @@
         </div>
       </div>
 
-    </div>
+      <!-- =========================================================================
+           CATÁLOGO COMPLETO & GRADE COM FILTROS E BUSCA
+           ========================================================================= -->
+      <div class="mt-20 pt-16 border-t border-hairline">
+        
+        <!-- Cabeçalho do Catálogo -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between pb-8 border-b border-hairline gap-6">
+          <div>
+            <span class="text-xs font-tech-mono text-amber-400 tracking-[0.2em] uppercase">// CATÁLOGO COMPLETO</span>
+            <h4 class="text-3xl md:text-4xl font-editorial-title text-white tracking-widest mt-1">
+              TODOS OS TRABALHOS PUBLICADOS
+            </h4>
+            <p id="projects-count-badge" class="text-xs font-tech-mono text-neutral-400 mt-2">
+              EXIBINDO [ 4 ] DE [ 4 ] ARQUIVOS
+            </p>
+          </div>
 
-  </section>
-
-  <!-- =========================================================================
-       5. CATÁLOGO / GRADE EDITORIAL DE PROJETOS COM FILTROS & BUSCA
-       ========================================================================= -->
-  <section id="catalog-section" class="border-b border-hairline py-16 px-4 md:px-8 bg-[#0c0c0c]">
-    
-    <div class="max-w-7xl mx-auto">
-      
-      <!-- Cabeçalho do Catálogo -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between pb-8 border-b border-hairline gap-6">
-        <div>
-          <span class="text-xs font-tech-mono text-amber-400 tracking-[0.2em] uppercase">[ 02. CATÁLOGO COMPLETO ]</span>
-          <h3 class="text-3xl md:text-4xl font-editorial-title text-white tracking-widest mt-1">
-            SOFTWARE RELEASES & CODE SPECS
-          </h3>
-          <p id="projects-count-badge" class="text-xs font-tech-mono text-neutral-400 mt-2">
-            EXIBINDO [ 4 ] DE [ 4 ] ARQUIVOS
-          </p>
-        </div>
-
-        <!-- Barra de Busca Rápida -->
-        <div class="w-full md:w-80">
-          <div class="relative">
-            <input 
-              type="text" 
-              id="search-input" 
-              placeholder="BUSCAR POR STACK, TÍTULO OU ANO..." 
-              class="a24-input text-xs pl-8 placeholder:text-neutral-600"
-            />
-            <svg class="w-4 h-4 text-neutral-500 absolute left-2.5 top-3 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-            </svg>
+          <!-- Barra de Busca Rápida -->
+          <div class="w-full md:w-80">
+            <div class="relative">
+              <input 
+                type="text" 
+                id="search-input" 
+                placeholder="BUSCAR POR STACK, TÍTULO OU ANO..." 
+                class="a24-input text-xs pl-8 placeholder:text-neutral-600"
+              />
+              <svg class="w-4 h-4 text-neutral-500 absolute left-2.5 top-3 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+              </svg>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Filtros por Categoria -->
-      <div class="py-6 border-b border-hairline flex flex-wrap items-center gap-2 text-xs font-tech-mono">
-        <span class="text-neutral-500 uppercase mr-2 tracking-widest text-[10px]">// FILTRAR:</span>
-        
-        <button 
-          onclick="setFilter('ALL', this)" 
-          data-filter="ALL"
-          class="filter-btn px-3 py-1.5 border border-neutral-700 bg-white text-black font-semibold transition-all"
-        >
-          TODOS OS PROJETOS
-        </button>
-
-        <button 
-          onclick="setFilter('TCC', this)" 
-          data-filter="TCC"
-          class="filter-btn px-3 py-1.5 border border-amber-400/50 bg-amber-400/10 text-amber-300 hover:text-white hover:border-amber-400 transition-all font-semibold"
-        >
-          ★ TCC (PRINCIPAL)
-        </button>
-
-        <button 
-          onclick="setFilter('Simulador', this)" 
-          data-filter="Simulador"
-          class="filter-btn px-3 py-1.5 border border-neutral-800 bg-transparent text-neutral-400 hover:text-white hover:border-neutral-600 transition-all"
-        >
-          SIMULADOR & EDTECH
-        </button>
-
-        <button 
-          onclick="setFilter('Full Stack', this)" 
-          data-filter="Full Stack"
-          class="filter-btn px-3 py-1.5 border border-neutral-800 bg-transparent text-neutral-400 hover:text-white hover:border-neutral-600 transition-all"
-        >
-          FULL STACK & APIS
-        </button>
-
-        <button 
-          onclick="setFilter('Front-End', this)" 
-          data-filter="Front-End"
-          class="filter-btn px-3 py-1.5 border border-neutral-800 bg-transparent text-neutral-400 hover:text-white hover:border-neutral-600 transition-all"
-        >
-          FRONT-END & UI
-        </button>
-
-        <button 
-          onclick="openCreateModal()" 
-          class="ml-auto text-amber-400 hover:text-amber-300 font-tech-mono text-xs flex items-center gap-1.5 py-1 px-2 border border-amber-400/40"
-        >
-          <span>+ ADICIONAR NOVO CARD</span>
-        </button>
-      </div>
-
-      <!-- Grid de Posters de Projetos -->
-      <div id="projects-grid-mount" class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Renderizado dinamicamente por renderGrid() em app.js -->
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- =========================================================================
-       6. COLOPHON, BIO & FICHA TÉCNICA DO ENGENHEIRO
-       ========================================================================= -->
-  <section id="colophon-section" class="py-20 px-4 md:px-8 bg-[#080808] border-b border-hairline">
-    <div class="max-w-7xl mx-auto">
-      
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        
-        <!-- Coluna Bio & Filosofia -->
-        <div class="lg:col-span-7 space-y-6">
-          <span class="text-xs font-tech-mono text-amber-400 tracking-[0.2em] uppercase">[ 03. BIO & COLOPHON ]</span>
+        <!-- Filtros por Categoria -->
+        <div class="py-6 border-b border-hairline flex flex-wrap items-center gap-2 text-xs font-tech-mono">
+          <span class="text-neutral-500 uppercase mr-2 tracking-widest text-[10px]">// FILTRAR:</span>
           
-          <h3 class="text-3xl md:text-5xl font-editorial-title font-bold text-white tracking-widest leading-tight">
-            VICTOR GABRIEL ARVELLOS
-          </h3>
+          <button 
+            onclick="setFilter('ALL', this)" 
+            data-filter="ALL"
+            class="filter-btn px-3 py-1.5 border border-neutral-700 bg-white text-black font-semibold transition-all"
+          >
+            TODOS OS PROJETOS
+          </button>
 
-          <p class="text-lg font-editorial-serif text-neutral-300 italic leading-relaxed">
-            "Acredito que o desenvolvimento de software alcança sua maturidade quando a solidez da engenharia e o design centrado no usuário operam em sincronia. Cada aplicação — desde o Trabalho de Conclusão de Curso até simuladores educativos complexos — é desenvolvida com atenção meticulosa à arquitetura, fluidez e impacto real."
-          </p>
+          <button 
+            onclick="setFilter('TCC', this)" 
+            data-filter="TCC"
+            class="filter-btn px-3 py-1.5 border border-amber-400/50 bg-amber-400/10 text-amber-300 hover:text-white hover:border-amber-400 transition-all font-semibold"
+          >
+            ★ TCC (PRINCIPAL)
+          </button>
 
-          <p class="text-sm font-editorial-sans text-neutral-400 leading-relaxed">
-            Desenvolvedor Full Stack com sólida experiência em React, TypeScript, JavaScript, Node.js, Express, Vite, MongoDB e TailwindCSS. Especialista na criação de Single Page Applications (SPAs) de alta performance, e-commerce reativo com gerenciamento de estado dinâmico, simuladores pedagógicos com Web Audio API e serviços RESTful com banco de dados em memória.
-          </p>
+          <button 
+            onclick="setFilter('Simulador', this)" 
+            data-filter="Simulador"
+            class="filter-btn px-3 py-1.5 border border-neutral-800 bg-transparent text-neutral-400 hover:text-white hover:border-neutral-600 transition-all"
+          >
+            SIMULADOR & EDTECH
+          </button>
 
-          <!-- Links de Contato & Redes -->
-          <div class="pt-4 flex flex-wrap items-center gap-4 text-xs font-tech-mono">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-a24-outline">
-              GITHUB ↗
+          <button 
+            onclick="setFilter('Full Stack', this)" 
+            data-filter="Full Stack"
+            class="filter-btn px-3 py-1.5 border border-neutral-800 bg-transparent text-neutral-400 hover:text-white hover:border-neutral-600 transition-all"
+          >
+            FULL STACK & APIS
+          </button>
+
+          <button 
+            onclick="setFilter('Front-End', this)" 
+            data-filter="Front-End"
+            class="filter-btn px-3 py-1.5 border border-neutral-800 bg-transparent text-neutral-400 hover:text-white hover:border-neutral-600 transition-all"
+          >
+            FRONT-END & UI
+          </button>
+
+          <button 
+            onclick="openCreateModal()" 
+            class="ml-auto text-amber-400 hover:text-amber-300 font-tech-mono text-xs flex items-center gap-1.5 py-1 px-2 border border-amber-400/40"
+          >
+            <span>+ ADICIONAR NOVO CARD</span>
+          </button>
+        </div>
+
+        <!-- Grid de Posters de Projetos -->
+        <div id="projects-grid-mount" class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Renderizado dinamicamente por renderGrid() em app.js -->
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================================================================
+       PARTE 3: CONTATO (E-MAIL, INSTAGRAM, WHATSAPP & FORMULÁRIO RÁPIDO)
+       ========================================================================= -->
+  <section id="contato" class="py-20 md:py-28 px-4 md:px-8 bg-[#080808] border-b border-hairline relative overflow-hidden">
+    
+    <!-- Linhas decorativas de fundo -->
+    <div class="absolute inset-0 pointer-events-none opacity-5">
+      <div class="max-w-7xl mx-auto h-full grid grid-cols-3 border-x border-dashed border-white">
+        <div class="border-r border-dashed border-white h-full"></div>
+        <div class="border-r border-dashed border-white h-full"></div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+      
+      <!-- Cabeçalho da Seção Contato -->
+      <div class="max-w-3xl space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-neutral-950 border border-neutral-800 text-[10px] font-tech-mono text-amber-300 tracking-[0.2em] uppercase">
+          <span>★ 03. CONTATO</span>
+          <span>•</span>
+          <span>GET IN TOUCH // CANAIS DIRETOS</span>
+        </div>
+
+        <h3 class="text-3xl md:text-5xl lg:text-6xl font-editorial-title font-bold text-white tracking-widest leading-tight">
+          VAMOS CONVERSAR & CONSTRUIR ALGO INCRÍVEL.
+        </h3>
+
+        <p class="text-base md:text-lg font-editorial-serif text-neutral-300 italic leading-relaxed">
+          "Estou aberto a oportunidades profissionais, desenvolvimento de projetos sob demanda, contratos e freelas. Fique à vontade para me mandar uma mensagem direta em qualquer um dos canais abaixo."
+        </p>
+      </div>
+
+      <!-- Grid com os 3 Canais de Contato Solicitados -->
+      <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Card 1: E-MAIL -->
+        <div class="bg-neutral-950 p-6 md:p-8 border border-neutral-800 hover:border-neutral-600 transition-all flex flex-col justify-between space-y-6 group">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between text-xs font-tech-mono">
+              <span class="text-neutral-500 uppercase tracking-widest text-[10px]">// CANAL 01</span>
+              <span class="text-amber-400 font-semibold text-[10px] uppercase">E-MAIL OFICIAL</span>
+            </div>
+            
+            <div class="flex items-center gap-3 pt-2">
+              <div class="w-10 h-10 rounded-none bg-neutral-900 border border-neutral-800 flex items-center justify-center text-lg text-white">
+                ✉
+              </div>
+              <div>
+                <h4 class="text-sm font-tech-mono uppercase tracking-wider text-neutral-400">E-mail</h4>
+                <div class="text-base font-tech-mono font-semibold text-white break-all">viarvellos@gmail.com</div>
+              </div>
+            </div>
+
+            <p class="text-xs font-editorial-sans text-neutral-400 pt-2 leading-relaxed">
+              Ideal para propostas formais, oportunidades de trabalho, detalhamento de escopo ou envio de especificações.
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-neutral-900 flex flex-wrap items-center gap-2 text-xs font-tech-mono">
+            <a href="mailto:viarvellos@gmail.com" class="btn-a24-primary flex-1 text-center py-2 text-[11px]">
+              ENVIAR E-MAIL ↗
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn-a24-outline">
-              LINKEDIN ↗
-            </a>
-            <a href="mailto:victor.arvellos@example.com" class="btn-a24-primary">
-              ENTRAR EM CONTATO ✉
-            </a>
+            <button onclick="copyToClipboard('viarvellos@gmail.com', 'E-mail')" class="btn-a24-outline px-3 py-2 text-[11px]" title="Copiar e-mail">
+              COPIAR 📋
+            </button>
           </div>
         </div>
 
-        <!-- Coluna Especificações Técnicas (Credits Crawl) -->
-        <div class="lg:col-span-5 bg-neutral-950 p-6 md:p-8 border border-neutral-800 space-y-6">
-          <h4 class="text-xs font-tech-mono uppercase tracking-[0.2em] text-neutral-400 border-b border-neutral-800 pb-3">
-            // ESPECIFICAÇÕES TÉCNICAS DO ARQUIVO
-          </h4>
-
-          <div class="space-y-4 text-xs font-tech-mono">
-            <div>
-              <div class="text-[10px] text-neutral-500 uppercase">CORE STACK</div>
-              <div class="text-neutral-200 mt-0.5">React, TypeScript, JavaScript, Node.js, Express, Vite, TailwindCSS</div>
+        <!-- Card 2: WHATSAPP -->
+        <div class="bg-neutral-950 p-6 md:p-8 border border-neutral-800 hover:border-emerald-500/50 transition-all flex flex-col justify-between space-y-6 group">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between text-xs font-tech-mono">
+              <span class="text-neutral-500 uppercase tracking-widest text-[10px]">// CANAL 02</span>
+              <span class="text-emerald-400 font-semibold text-[10px] uppercase">RESPOSTA RÁPIDA</span>
+            </div>
+            
+            <div class="flex items-center gap-3 pt-2">
+              <div class="w-10 h-10 rounded-none bg-emerald-950/40 border border-emerald-800/60 flex items-center justify-center text-lg text-emerald-400">
+                💬
+              </div>
+              <div>
+                <h4 class="text-sm font-tech-mono uppercase tracking-wider text-neutral-400">WhatsApp / Telefone</h4>
+                <div class="text-base font-tech-mono font-semibold text-emerald-400">(19) 91680-1102</div>
+              </div>
             </div>
 
-            <div>
-              <div class="text-[10px] text-neutral-500 uppercase">DATABASE & BACKEND</div>
-              <div class="text-neutral-200 mt-0.5">MongoDB (In-Memory), Mongoose, RESTful APIs, State Machines</div>
-            </div>
+            <p class="text-xs font-editorial-sans text-neutral-400 pt-2 leading-relaxed">
+              Para alinhamentos ágeis, dúvidas, bate-papo técnico ou reuniões diretas sobre novos projetos.
+            </p>
+          </div>
 
-            <div>
-              <div class="text-[10px] text-neutral-500 uppercase">IMERSÃO & WEB APIS</div>
-              <div class="text-neutral-200 mt-0.5">Web Audio API, Responsive Layouts, LocalStorage Persistence, Vercel CI/CD</div>
-            </div>
-
-            <div>
-              <div class="text-[10px] text-neutral-500 uppercase">ESTÉTICA & PORTFÓLIO ENGINE</div>
-              <div class="text-neutral-200 mt-0.5">A24 Minimalist Noir • Web Audio API • LocalStorage CRUD</div>
-            </div>
-
-            <div class="pt-4 border-t border-neutral-900 flex justify-between text-[10px] text-neutral-500">
-              <span>PRODUÇÃO: VICTOR GABRIEL ARVELLOS</span>
-              <span>VOL. 2026 // ALL RIGHTS RESERVED</span>
-            </div>
+          <div class="pt-4 border-t border-neutral-900 flex flex-wrap items-center gap-2 text-xs font-tech-mono">
+            <a href="https://wa.me/5519916801102?text=Ol%C3%A1%20Victor!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener noreferrer" class="btn-a24-primary flex-1 text-center py-2 text-[11px] bg-emerald-500 text-black border-emerald-400 hover:bg-emerald-400">
+              CONVERSAR NO WHATSAPP ↗
+            </a>
+            <button onclick="copyToClipboard('19916801102', 'WhatsApp')" class="btn-a24-outline px-3 py-2 text-[11px]" title="Copiar número do WhatsApp">
+              COPIAR 📋
+            </button>
           </div>
         </div>
 
+        <!-- Card 3: INSTAGRAM -->
+        <div class="bg-neutral-950 p-6 md:p-8 border border-neutral-800 hover:border-pink-500/50 transition-all flex flex-col justify-between space-y-6 group">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between text-xs font-tech-mono">
+              <span class="text-neutral-500 uppercase tracking-widest text-[10px]">// CANAL 03</span>
+              <span class="text-pink-400 font-semibold text-[10px] uppercase">REDE SOCIAL & DM</span>
+            </div>
+            
+            <div class="flex items-center gap-3 pt-2">
+              <div class="w-10 h-10 rounded-none bg-neutral-900 border border-neutral-800 flex items-center justify-center text-lg text-pink-400">
+                📸
+              </div>
+              <div>
+                <h4 class="text-sm font-tech-mono uppercase tracking-wider text-neutral-400">Instagram</h4>
+                <div class="text-base font-tech-mono font-semibold text-white">@viitorkkjk</div>
+              </div>
+            </div>
+
+            <p class="text-xs font-editorial-sans text-neutral-400 pt-2 leading-relaxed">
+              Acompanhe novidades, projetos, rotina de desenvolvimento e mande mensagem direta (Direct).
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-neutral-900 flex flex-wrap items-center gap-2 text-xs font-tech-mono">
+            <a href="https://instagram.com/viitorkkjk" target="_blank" rel="noopener noreferrer" class="btn-a24-primary flex-1 text-center py-2 text-[11px]">
+              ABRIR PERFIL NO INSTA ↗
+            </a>
+            <button onclick="copyToClipboard('@viitorkkjk', 'Instagram')" class="btn-a24-outline px-3 py-2 text-[11px]" title="Copiar @ do Instagram">
+              COPIAR 📋
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Caixa de Mensagem Rápida Direta -->
+      <div class="mt-12 bg-neutral-950 p-6 md:p-8 border border-neutral-800">
+        <div class="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-neutral-900 gap-4">
+          <div>
+            <h4 class="text-base font-tech-mono uppercase tracking-widest text-white">
+              // DISPARO RÁPIDO DE MENSAGEM
+            </h4>
+            <p class="text-xs font-tech-mono text-neutral-400 mt-1">
+              Escreva sua mensagem abaixo para abrir a conversa formatada no WhatsApp ou enviar por e-mail com 1 clique:
+            </p>
+          </div>
+          <div class="text-[10px] font-tech-mono text-neutral-500 uppercase">
+            RESPOSTA EM POUCAS HORAS
+          </div>
+        </div>
+
+        <form onsubmit="handleQuickMessage(event)" class="mt-6 grid grid-cols-1 md:grid-cols-12 gap-4">
+          <div class="md:col-span-4">
+            <label class="a24-label">Seu Nome / Empresa</label>
+            <input type="text" id="quick-name" placeholder="Ex: Lucas / Empresa X" class="a24-input" />
+          </div>
+
+          <div class="md:col-span-8">
+            <label class="a24-label">Sua Mensagem *</label>
+            <input type="text" id="quick-message" required placeholder="Ex: Olá Victor, gostei muito do projeto do TCC e tenho uma proposta..." class="a24-input" />
+          </div>
+
+          <div class="md:col-span-12 flex flex-wrap items-center justify-between gap-4 pt-2">
+            <div class="text-[10px] font-tech-mono text-neutral-500">
+              CANAIS DIRETOS: viarvellos@gmail.com • (19) 91680-1102 • @viitorkkjk
+            </div>
+            <div class="flex items-center gap-3">
+              <a href="mailto:viarvellos@gmail.com" class="btn-a24-outline text-xs">
+                MANDAR POR E-MAIL ✉
+              </a>
+              <button type="submit" class="btn-a24-primary text-xs">
+                ENVIAR NO WHATSAPP 💬
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
 
     </div>
   </section>
 
   <!-- =========================================================================
-       7. RODAPÉ CINEMÁTICO (CREDITS CRAWL / A24 STYLE)
+       RODAPÉ CINEMÁTICO (CREDITS CRAWL / A24 STYLE COM LINKS DAS 3 PARTES)
        ========================================================================= -->
-  <footer class="py-12 px-4 md:px-8 bg-black text-center text-xs font-tech-mono text-neutral-500">
-    <div class="max-w-7xl mx-auto space-y-4">
-      <div class="text-lg font-editorial-title tracking-[0.3em] text-neutral-400">
-        VICTOR GABRIEL ARVELLOS
+  <footer class="py-16 px-4 md:px-8 bg-black border-t border-hairline text-xs font-tech-mono text-neutral-400">
+    <div class="max-w-7xl mx-auto space-y-6">
+      
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-neutral-900 pb-8">
+        <div>
+          <div class="text-xl md:text-2xl font-editorial-title font-bold tracking-[0.25em] text-white">
+            VICTOR GABRIEL ARVELLOS
+          </div>
+          <p class="text-[10px] tracking-widest text-neutral-500 uppercase mt-1">
+            SOFTWARE ENGINEER & FULL STACK DEVELOPER • A24 ARCHIVE
+          </p>
+        </div>
+
+        <nav class="flex flex-wrap items-center gap-6 text-xs text-neutral-400 tracking-widest">
+          <a href="#sobre-mim" class="hover:text-white transition-colors">01. SOBRE MIM</a>
+          <a href="#projetos" class="hover:text-white transition-colors">02. PROJETOS</a>
+          <a href="#contato" class="hover:text-white transition-colors text-amber-300/90 hover:text-amber-200">03. CONTATO</a>
+        </nav>
       </div>
-      <p class="text-[10px] tracking-widest text-neutral-600 uppercase">
-        AN INDEPENDENT PRODUCTION OF CODE & SYSTEM ARCHITECTURE • INSPIRAÇÃO A24
-      </p>
-      <div class="text-[9px] text-neutral-700 tracking-wider">
-        TODOS OS DADOS EDITADOS NESTE PORTFÓLIO SÃO AUTOMATICAMENTE PERSISTIDOS NO SEU NAVEGADOR VIA LOCALSTORAGE.
+
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-[11px] text-neutral-400">
+        <div class="space-x-4">
+          <a href="mailto:viarvellos@gmail.com" class="hover:text-white transition-colors">✉ viarvellos@gmail.com</a>
+          <a href="https://wa.me/5519916801102" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors">💬 (19) 91680-1102</a>
+          <a href="https://instagram.com/viitorkkjk" target="_blank" rel="noopener noreferrer" class="hover:text-pink-400 transition-colors">📸 @viitorkkjk</a>
+        </div>
+        <div class="text-[10px] text-neutral-600">
+          © 2026 VICTOR GABRIEL ARVELLOS • TODOS OS DIREITOS RESERVADOS
+        </div>
+      </div>
+
+      <div class="text-[9px] text-neutral-700 tracking-wider text-center pt-2">
+        ESTE PORTFÓLIO APRESENTA O TCC COMO PROJETO PRINCIPAL E APLICAÇÕES PUBLICADAS NO VERCEL. DADOS PERSISTIDOS VIA LOCALSTORAGE.
       </div>
     </div>
   </footer>
 
   <!-- =========================================================================
-       8. MODAL DE GERENCIAMENTO & EDIÇÃO DE PROJETOS (CRUD CMS)
+       MODAL DE GERENCIAMENTO & EDIÇÃO DE PROJETOS (CRUD CMS)
        ========================================================================= -->
   <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 a24-modal-backdrop overflow-y-auto">
     <div class="a24-modal-panel w-full max-w-2xl my-8 p-6 md:p-8 relative">
@@ -467,13 +659,13 @@
           <!-- Título -->
           <div>
             <label class="a24-label">Título do Projeto *</label>
-            <input type="text" id="form-title" required placeholder="Ex: NEXUS HYPERGRAPH" class="a24-input" />
+            <input type="text" id="form-title" required placeholder="Ex: NANA & MIMI (TCC)" class="a24-input" />
           </div>
 
           <!-- Subtítulo -->
           <div>
             <label class="a24-label">Subtítulo / Especialidade</label>
-            <input type="text" id="form-subtitle" placeholder="Ex: DISTRIBUTED GRAPH ENGINE" class="a24-input" />
+            <input type="text" id="form-subtitle" placeholder="Ex: PLATAFORMA E-COMMERCE" class="a24-input" />
           </div>
         </div>
 
@@ -500,7 +692,7 @@
           <div>
             <label class="a24-label">Avaliação / Estrelas</label>
             <select id="form-rating" class="a24-input bg-[#141414] text-white">
-              <option value="5.0">★ 5.0 (Masterpiece)</option>
+              <option value="5.0">★ 5.0 (Masterpiece / Nota Máxima)</option>
               <option value="4.9">★ 4.9 (Outstanding)</option>
               <option value="4.8">★ 4.8 (Exceptional)</option>
               <option value="4.5">★ 4.5 (High Performance)</option>
@@ -511,29 +703,29 @@
         <!-- Stack Tecnológica -->
         <div>
           <label class="a24-label">Stack Tecnológica * (Separada por vírgula)</label>
-          <input type="text" id="form-stack" required placeholder="Ex: TypeScript, React, Node.js, Python, PostgreSQL, Docker" class="a24-input" />
+          <input type="text" id="form-stack" required placeholder="Ex: React, TypeScript, Vite, TailwindCSS, Node.js" class="a24-input" />
           <p class="text-[10px] font-tech-mono text-neutral-500 mt-1">Insira as tecnologias separadas por vírgula. Elas serão convertidas em chips de créditos.</p>
         </div>
 
         <!-- Review Técnico (Crítica de Cinema adaptada para Código) -->
         <div>
           <label class="a24-label">Review Técnico / Avaliação do Código *</label>
-          <input type="text" id="form-review" required placeholder="Ex: ★ 5.0 — Arquitetura de microsserviços impecável com alta concorrência" class="a24-input" />
+          <input type="text" id="form-review" required placeholder="Ex: ★ 5.0 — Projeto Principal de Conclusão de Curso com alta conversão" class="a24-input" />
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <!-- Autor do Review -->
           <div>
             <label class="a24-label">Autor da Avaliação / Auditoria</label>
-            <input type="text" id="form-reviewer" placeholder="Ex: Senior Tech Lead Audit" class="a24-input" />
+            <input type="text" id="form-reviewer" placeholder="Ex: Banca Examinadora de TCC" class="a24-input" />
           </div>
 
           <!-- Tema Visual da Capa -->
           <div>
             <label class="a24-label">Estética Visual do Pôster</label>
             <select id="form-theme" class="a24-input bg-[#141414] text-white">
-              <option value="monolith">Cosmic Monolith (Azul / Titânio)</option>
               <option value="gold">Gold Archive (Dourado / Âmbar)</option>
+              <option value="monolith">Cosmic Monolith (Azul / Titânio)</option>
               <option value="emerald">Emerald Matrix (Verde Esmeralda)</option>
               <option value="cyber">Cyber Obsidian (Púrpura Noir)</option>
               <option value="noir">Minimalist Monochrome (Preto & Branco)</option>
@@ -544,19 +736,19 @@
         <!-- Sinopse / Descrição Técnica -->
         <div>
           <label class="a24-label">Sinopse Técnica / Descrição do Sistema *</label>
-          <textarea id="form-description" rows="3" required placeholder="Descreva os desafios arquiteturais, concorrência, latência e impacto deste software..." class="a24-input resize-none"></textarea>
+          <textarea id="form-description" rows="3" required placeholder="Descreva os desafios arquiteturais, impacto e tecnologias deste projeto..." class="a24-input resize-none"></textarea>
         </div>
 
         <!-- Links: GitHub e Live Demo -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label class="a24-label">URL do GitHub</label>
+            <label class="a24-label">URL do GitHub (Opcional)</label>
             <input type="url" id="form-github" placeholder="https://github.com/..." class="a24-input" />
           </div>
 
           <div>
-            <label class="a24-label">URL da Live Demo</label>
-            <input type="url" id="form-demo" placeholder="https://..." class="a24-input" />
+            <label class="a24-label">URL da Live Demo (Vercel)</label>
+            <input type="url" id="form-demo" placeholder="https://...vercel.app" class="a24-input" />
           </div>
         </div>
 
@@ -588,7 +780,7 @@
   </div>
 
   <!-- =========================================================================
-       9. MODAL DE INSPEÇÃO TÉCNICA DETALHADA (FULL SPEC SHEET)
+       MODAL DE INSPEÇÃO TÉCNICA DETALHADA (FULL SPEC SHEET)
        ========================================================================= -->
   <div id="details-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 a24-modal-backdrop overflow-y-auto">
     <div class="a24-modal-panel w-full max-w-4xl my-8 p-6 md:p-8 relative">
